@@ -11,13 +11,13 @@ app.use(express.json());
 app.use('/api', router);
 
 async function startApp() {
-    try{
-        await mongoose.connect(DB_URL, {useUnifiedTopology: true, useNewUrlParser: true});
-        app.listen(PORT, () => { console.log("server working on port " + PORT);})
+  try {
+    await mongoose.connect(DB_URL, { useUnifiedTopology: true, useNewUrlParser: true });
+    app.listen(PORT, () => { console.log("server working on port " + PORT); })
 
-    }catch(e){
-        console.log(e)
-    }
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 startApp();
